@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 4s
+
+scrape_configs:
+  - job_name: 'node-app'
+    static_configs:
+      - targets: ['node-app-private-ec2-address:2000']
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets:
+          - 'node-app-private-ec2-address:9100'
+          - 'monitor-private-ec2-address:9100'
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['node-app-private-ec2-address:8080']
