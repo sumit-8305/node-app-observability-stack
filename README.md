@@ -36,7 +36,7 @@ This project separates the two concerns onto dedicated instances: one runs the a
 
 ## Setup
 
-![Architecture diagram](docs/images/arch.png)
+![Architecture diagram](docs/images/arch)
 
 ---
 
